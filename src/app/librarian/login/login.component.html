@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row align-items-center">
+    
+        <div class="form-with-border mx-auto">
+      <div [hidden]="submitted">
+        <h1 class="text-center">Login Form</h1>
+        <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+     
+            <div class="col-xs-3">
+              <div class="form-group">
+                <label for="id">Id</label>
+                <input type="text" class="form-control" id="id" required [(ngModel)]="model.id" name="id">
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="form-group">
+                <label for="name">Username</label>
+                <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
+              </div>
+            </div>
+       
+            <div class="col-xs-3">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control " id="password"
+                     required
+                     [(ngModel)]="model.password" name="password">
+            </div>
+            </div> 
+         
+        </form>
+      </div>
+      <div class="text-center mt-5" >
+        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid" (click)="homePage()">Submit</button>
+        <span style="margin: 0 10px;"></span>
+        <button type="button" class="btn btn-default" (click)="newLibrarian(); heroForm.reset()">New Student</button>
+      </div>
+
+  </div>
+      <div [hidden]="!submitted">
+      </div>
+    </div>
+    </div>
+      
+ 
+    

@@ -1,0 +1,33 @@
+<!-- <h1 mat-dialog-title>Borrow Book</h1>
+<div mat-dialog-content>
+  <form [formGroup]="form">
+    <mat-form-field>
+      <mat-label>member Id</mat-label>
+      <input type="number" matInput formControlName="memberId" />
+      <mat-error *ngIf="form.controls.memberId.hasError('required')">
+        Please enter member id
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Number Of Copies</mat-label>
+      <input type="number" matInput formControlName="numberOfCopies" />
+      <mat-error *ngIf="form.controls.numberOfCopies.hasError('max')">
+        Please Don't exceed limit
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>No</button>
+  <button
+    mat-button
+    mat-dialog-close
+    cdkFocusInitial
+    [disabled]="form.invalid"
+    (click)="Send()"
+  >
+    Ok
+  </button>
+</div>
+ -->
