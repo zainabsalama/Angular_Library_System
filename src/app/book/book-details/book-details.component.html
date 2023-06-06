@@ -1,13 +1,22 @@
-<p>book-details works!</p>
-<div >
-  {{book?.id}},
-  {{book?.code}},
-  {{book?.title}},
-  {{book?.numOfCopies}}
-  <span style="margin: 0 200px;"></span>
-  <!-- <input type="number" [(ngModel)]="borowedBook.numberOfCopies" placeholder="Number of Copies">
-  <input type="number" [(ngModel)]="borowedBook.memberId" placeholder="memberId"> -->
-  <button mat-flat-button color="primary" (click)="Borrow()" [disabled]="!borowedBook">Borrow</button>
-  <span style="margin: 0 10px;"></span>
-  <!-- <button mat-flat-button color="primary" (click)="Retreive()">Retrive</button> -->
+<div class="book-details">
+  <span class="detail-label">ID:</span>
+  <span class="detail-value">{{ book?.id }}</span>
+  <span class="detail-label">Code:</span>
+  <span class="detail-value">{{ book?.code }}</span>
+  <span class="detail-label">Title:</span>
+  <span class="detail-value">{{ book?.title }}</span>
+  <span class="detail-label">Number of Copies:</span>
+  <span class="detail-value">{{ book?.numOfCopies }}</span>
+  <br />
+
+  <div class="action-buttons">
+    <button
+      mat-flat-button
+      color="primary"
+      (click)="Borrow()"
+      [disabled]="!borowedBook"
+    >
+      Borrow
+    </button>
+  </div>
 </div>

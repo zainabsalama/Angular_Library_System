@@ -1,16 +1,22 @@
-<p>book-add works!</p>
-<!-- <input [(ngModel)]="newBook.id"> -->
-<label>Code</label>
-<br>
-<input [(ngModel)]="newBook.code">
-<br>
-<label>Title</label>
-<br>
-<input [(ngModel)]="newBook.title">
-<br>
-<label>Number Of copies</label>
-<br>
-<input [(ngModel)]="newBook.numOfCopies">
-<br>
-<button (click)="Add()">Add</button>
+<div class="form-container">
+    <h2>Add a Book</h2>
+    <form>
+      <div class="form-group">
+        <label for="code">Code</label>
+        <input id="code" type="text" [(ngModel)]="newBook.code" required>
+      </div>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input id="title" type="text" [(ngModel)]="newBook.title" required>
+      </div>
+      <div class="form-group">
+        <label for="numOfCopies">Number of Copies</label>
+        <input id="numOfCopies" type="number" [(ngModel)]="newBook.numOfCopies" required>
+      </div>
+      <div class="form-group">
+        <button (click)="Add()">Add</button>
+      </div>
+    </form>
+  </div>
+  
 
